@@ -79,6 +79,7 @@ CUDA_VISIBLE_DEVICES=0,1,2,3 python -m torch.distributed.launch --nproc_per_node
 ```
 CUDA_VISIBLE_DEVICES=0,1,2,3 python -m torch.distributed.launch --nproc_per_node 4 --master_port 14278 train_semi_CPI.py --model lavt --dataset refcoco --model_id refcoco --sup_percent 1 --unsup_percent 99 --output-dir ./output/1%/refcoco/cpi --batch-size 3 --lr 0.00005 --wd 1e-2 --swin_type base --pretrained_swin_weights pretrained_weights/swin_base_patch4_window12_384_22k.pth --epochs 40 --img_size 480 --burn_int_ckpt ./output/1%/refcoco/sup/model_best_refcoco.pth
 ```
+Note that train_semi_CPI is not the code for results of Table 1 
 ## Testing
 
 Test results on RefCOCO 
