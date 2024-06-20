@@ -58,7 +58,7 @@ At this point the directory  SemiRES should look like:
 ### Generate SAM mask proposal
 put SAM pretrained model https://dl.fbaipublicfiles.com/segment_anything/sam_vit_h_4b8939.pth into ./segment-anything
 ```
-CUDA_VISIBLE_DEVICES=0,1,2,3 python -m torch.distributed.launch --nproc_per_node 4 --master_port 51240 segment-anything/sam-refcoco/segment_anything_mode.py --dataset refcoco --annotation_path ./anns/refcoco.json
+CUDA_VISIBLE_DEVICES=0,1,2,3 python -m torch.distributed.launch --nproc_per_node 4 --master_port 51240 segment-anything-third-party/sam-refcoco/segment_anything_mode.py --dataset refcoco --annotation_path ./anns/refcoco.json
 ```
 ### The Initialization Weights for Training
 1. Create the `./pretrained_weights` directory where we will be storing the weights.
