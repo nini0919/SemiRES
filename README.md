@@ -21,7 +21,7 @@ pip install torch==1.10.0+cu111 torchvision==0.11.0+cu111 torchaudio==0.10.0 -f 
 ```shell
 pip install -r requirements.txt
 ```
-4. cd segment-anything && pip install -e . && cd ..
+4. cd segment-anything-third-party && pip install -e . && cd ..
 
 ### Datasets
 1. Follow instructions in the `./refer` directory to set up subdirectories
